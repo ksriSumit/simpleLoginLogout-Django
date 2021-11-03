@@ -1,0 +1,15 @@
+{% if user.is_authenticated %}
+<h1>Hello {{user.username}}</h1>
+{% else %}
+<h1>Hello Everyone</h1>
+{% endif %}
+
+{% if user.is_authenticated %}
+<form action="logout">
+    <input type="submit" value="Logout" />
+</form>
+{% else %}
+<form action="login">
+    <input type="submit" value="Login or SignUp" />
+</form>
+{% endif %}
