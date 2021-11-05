@@ -50,3 +50,12 @@ def logout(request):
 
 def index(request):
     return render(request,'index.html')
+
+
+def post(request,pk):
+    #pk = pk.upper()
+    return render(request,'post.html',{'pk':pk.capitalize()})
+
+def counter(request):
+    posts = [1,2,3,4,5,'Sumit','stangly','chang','keshar','ksrisumit','Ravi Shankar']
+    return render(request,'counter.html',{'posts':posts})
